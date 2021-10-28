@@ -158,6 +158,10 @@
       border-radius: var(--size-border-radius);
   }
 
+  .home__contact:hover {
+      background-color: var(--color-orange);
+  }
+
   /* Section common */
   .section {
       padding: 50px;
@@ -389,4 +393,96 @@
   .testmonial {
       display: flex;
       margin: 32px 0;
+  }
+
+  .testmonial__avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+  }
+
+  .testmonial__avatar:nth-child(odd) {
+      margin-right: 40px;
+  }
+
+  .testmonial__avatar:nth-child(even) {
+      margin-left: 40px;
+  }
+
+  .testmonial__speech-bubble {
+      padding: 18px;
+      background-color:  var(--color-white);
+      border-radius: var(--size-border-radius);
+  }
+
+  .testmonial__speech-bubble a {
+      color: var(--color-pink);
+  }
+
+  .testmonial__speech-bubble p {
+      color: var(--color-light-grey);
+  }
+
+  /* Contact */
+  #contact {
+      background-color: var(--color-pink);
+  }
+
+  .contact__title, contact__email, .contact_rights {
+      color: var(--color-white);
+  }
+
+  .contact__title {
+      margin: 32px 0;
+  }
+
+  .contact__links {
+      font-size: var(--font-large);
+      margin: 24px 0;
+  }
+
+  .contact__links i:hover {
+      transform: scale(1,1);
+      color: var(--color-yellow);
+      transition: all var(--animation-duration) ease-in;
+  }
+
+  /* Scroll */
+
+  .arrow-up {
+      position: fixed;
+      bottom: 50px;
+      right: 50px;
+      width: 70px;
+      height: 70px;
+      font-size: 50px;
+      color: var(--color-white);
+      background-color: var(--color-pink);
+      border-radius: 50%;
+      opacity: 0;
+  }
+
+  .navbar__toggle-btn {
+      color: var(--color-white);
+      font-size: var(--font-medium);
+      right: 25px;
+      display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    :root {
+        /* Font size */
+        --font-large: 30px;
+        --font-medium: 18px;
+        --font-regular: 16px;
+        --font-small: 14px;
+        --font-micro: 12px;
+      }
+
+      .navbar__toggle-btn {
+          display: block;
+          top: 16px;
+          right: 16px;
+          font-size: var(--font-medium);
+      }
   }
