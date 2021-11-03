@@ -343,6 +343,7 @@
   .project__img {
       max-width: 100%;
       max-height: 100%;
+      align-self: center;
   }
 
   .project__description {
@@ -362,7 +363,7 @@
 
   .project:hover .project__description {
       opacity: 0.8;
-      transform: translateY(0);
+      transform: translateY(0px);
   }
 
   .project__description h3 {
@@ -375,10 +376,10 @@
       position: relative;
       width: 25px;
       height: 2px;
-      background-color: var(--color-dark-white);
       left: 50%;
       margin-left:  -12px;
       margin-top: 8px;
+      background-color: var(--color-dark-white);
   }
 
   /* Testimonial */
@@ -428,7 +429,7 @@
       background-color: var(--color-pink);
   }
 
-  .contact__title, contact__email, .contact_rights {
+  .contact__title, .contact__email, .contact_rights {
       color: var(--color-white);
   }
 
@@ -439,12 +440,12 @@
   .contact__links {
       font-size: var(--font-large);
       margin: 24px 0;
+      transition: all var(--animation-duration) ease-in;
   }
 
   .contact__links i:hover {
       transform: scale(1,1);
       color: var(--color-yellow);
-      transition: all var(--animation-duration) ease-in;
   }
 
   /* Scroll */
@@ -484,5 +485,79 @@
           top: 16px;
           right: 16px;
           font-size: var(--font-medium);
+      }
+
+      #navbar {
+          flex-direction: column;
+          align-items: flex-start;
+          background-color: var(--color-pink);
+      }
+
+      .navbar__menu {
+          flex-direction: column;
+          text-align: center;
+          width: 100%;
+          display: none;
+      }
+
+      .navbar__menu.open {
+          display: block;
+      }
+
+      .section {
+          padding: 16px;
+          padding-top: 40px;
+      }
+
+      .about__majors {
+          flex-direction: column;
+          margin-top: 30px;
+          margin-bottom: 0px;
+      }
+
+      .major {
+          margin-bottom: 30px;
+      }
+
+      .testmonial__avatar {
+          width: 80px;
+          height: 80px;
+      }
+
+      .testmonial {
+          flex-direction: column;
+          align-items: center;
+      }
+
+      .testmonial__avatar:nth-child(even),
+      .testmonial__avatar:nth-child(odd) {
+          margin: 0;
+          margin-bottom: 0px;
+      }
+
+      .testmonial__speech-bubble {
+          order: 1;
+      }
+
+      .skillset {
+          flex-direction: column;
+      }
+
+      .category__btn {
+          margin: 4px 0;
+          width: 100%;
+      }
+
+      .project {
+          flex-grow: 1;
+      }
+
+      .arrow-up {
+          width: 50px;
+          height: 50px;
+          font-size: 30px;
+          line-height: 50px;
+          right: 16px;
+          bottom: 16px;
       }
   }
