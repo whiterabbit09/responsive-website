@@ -41,10 +41,13 @@ const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
     home.style.opacity = 1 - scrollY / homeHeight;
-    if(window.scrollY > homeHeight) {
+
+    //home의 1/2가 스크롤 되었을 때 arrow-up 버튼 생성
+    if (window.scrollY > homeHeight / 2) {
         arrowUp.style.opacity = 1;
     }
-    else {
+    //home이 모두 보일 경우 arrow-up 버튼 소멸
+    if (window.scrollY < 1) {
         arrowUp.style.opacity = 0;
     }
 });
